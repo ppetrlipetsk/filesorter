@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/filesorter_jar</output-path>
     <root id="archive" name="filesorter.jar">
       <element id="module-output" name="filesorter" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../includes/xmpcore-5.1.3.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

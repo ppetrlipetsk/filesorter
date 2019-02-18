@@ -44,13 +44,16 @@ public class IPTCTools {
                 if (description == null)
                     description = tag.getTagType() + " (unable to formulate description)";
                 String tagName=tag.getTagName();
-                if (tagName.equals("Date/Time")) {
+                if ((tagName.equals("Date/Time")||(tagName.equals("Date/Time Digitized")))) {
                     res=description;
                     break;
                 }
                 //return "[" + tag.getDirectoryName() + "] " + tag.getTagName() + " - " + description;
             }
         }
+
+        if (res.length()==0)
+            res=new SimpleDateFormat("yyyy:MM:dd 00:00:00").format(new Date());
         return res;
     }
 
